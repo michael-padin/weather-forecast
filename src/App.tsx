@@ -1,10 +1,9 @@
 import React from "react";
 
 import { Route, Routes } from "react-router-dom";
-
 import "./App.css";
 import { Navbar, ProtectedRoute } from "./components";
-import { Auth, Home, Weather } from "./pages";
+import { Auth, Home, NotFound, Weather } from "./pages";
 
 function App() {
   return (
@@ -13,23 +12,12 @@ function App() {
         <Navbar />
       </div>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/weather"
-          element={
-            <ProtectedRoute>
-              <Weather />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/login" element={<Auth />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/weather" element={<Weather />} />
+        <Route element={<ProtectedRoute />}>
+        </Route>
+          <Route path="/login" element={<Auth />} />
+          <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
