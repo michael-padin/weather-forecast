@@ -1,3 +1,35 @@
+# Weather Forecast
+
+## Links
+- [Repo](https://github.com/michael-padin/weather-forecast/ "Github Repo")
+- [Live](https://weather-forecast-mokie.netlify.app/ "Live View")
+- [Bugs](https://github.com/michael-padin/weather-forecast/issues "Issues Page")
+
+## Screenshots
+![image](https://user-images.githubusercontent.com/75446003/223560091-56a85283-b8ba-44a5-86f8-8143084f7621.png)
+![image](https://user-images.githubusercontent.com/75446003/223560144-0cc3cef3-ed00-4707-8c9c-2efabc16e814.png)
+![image](https://user-images.githubusercontent.com/75446003/223560219-72502444-ab1f-4925-a73a-2a45f8b73bf5.png)
+
+
+## Built With
+
+- TypeScript
+- JavaScript
+- React Js
+- Tailwind
+- OpenWeatherMap API
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
