@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const ProtectedRoute = ({children} : any) => {
-  return (
-    <div>ProtectedRoute</div>
-  )
-}
+import { useAuth0 } from "@auth0/auth0-react";
 
-export default ProtectedRoute
+import { Outlet, Navigate } from "react-router";
+
+const ProtectedRoute = ({ children }: any) => {
+  const { isAuthenticated } = useAuth0();
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+};
+
+export default ProtectedRoute;
