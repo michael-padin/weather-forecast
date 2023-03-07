@@ -2,7 +2,7 @@ import React from "react";
 
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar, ProtectedRoute } from "./components";
+import { Navbar } from "./components";
 import { Auth, Home, NotFound, Weather } from "./pages";
 
 function App() {
@@ -12,12 +12,10 @@ function App() {
         <Navbar />
       </div>
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/weather" element={<Weather />} />
-        <Route element={<ProtectedRoute />}>
-        </Route>
-          <Route path="/login" element={<Auth />} />
-          <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/login" element={<Auth />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
